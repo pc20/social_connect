@@ -1,6 +1,3 @@
-// Import the images module
-import './images.js';
-
 // DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
     // Post Creation
@@ -158,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const newComment = document.createElement('div');
                     newComment.className = 'comment';
                     newComment.innerHTML = `
-                        <img src="${PLACEHOLDER_SERVICES.uifaces(Math.floor(Math.random() * 100))}" alt="User" class="comment-avatar">
+                        <img src="images/default-avatar.png" alt="User" class="comment-avatar">
                         <div class="comment-content">
                             <h4>User Name</h4>
                             <p>${commentText}</p>
