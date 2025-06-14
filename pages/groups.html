@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groups - SocialConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .groups-container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+        }
+
+        .groups-list {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .groups-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e4e6eb;
+        }
+
+        .create-group-btn {
+            background-color: #1877f2;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .group-filters {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            cursor: pointer;
+        }
+
+        .filter-btn.active {
+            background-color: #1877f2;
+            color: #ffffff;
+        }
+
+        .group-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .group-cover {
+            height: 150px;
+            background-color: #1877f2;
+            position: relative;
+        }
+
+        .group-info {
+            padding: 1rem;
+        }
+
+        .group-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .group-stats {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: #65676b;
+        }
+
+        .group-description {
+            margin-bottom: 1rem;
+        }
+
+        .group-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .group-actions button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .join-btn {
+            background-color: #1877f2;
+            color: #ffffff;
+        }
+
+        .leave-btn {
+            background-color: #e4e6eb;
+            color: #1c1e21;
+        }
+
+        .groups-sidebar {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .my-groups {
+            margin-bottom: 2rem;
+        }
+
+        .group-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #e4e6eb;
+        }
+
+        .group-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin-right: 1rem;
+        }
+
+        .group-item-info {
+            flex: 1;
+        }
+
+        .group-item-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .group-item-members {
+            color: #65676b;
+            font-size: 0.9rem;
+        }
+
+        .group-categories {
+            margin-bottom: 2rem;
+        }
+
+        .category-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .category-item {
+            padding: 0.5rem 0;
+            color: #65676b;
+            cursor: pointer;
+        }
+
+        .category-item:hover {
+            color: #1877f2;
+        }
+
+        .category-item.active {
+            color: #1877f2;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>SocialConnect</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="messages.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="friends.html"><i class="fas fa-users"></i> Friends</a>
+        </div>
+        <div class="nav-search">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="groups-container">
+            <div class="groups-list">
+                <div class="groups-header">
+                    <h2>Groups</h2>
+                    <button class="create-group-btn">
+                        <i class="fas fa-plus"></i> Create Group
+                    </button>
+                </div>
+
+                <div class="group-filters">
+                    <button class="filter-btn active">All Groups</button>
+                    <button class="filter-btn">My Groups</button>
+                    <button class="filter-btn">Discover</button>
+                    <button class="filter-btn">Invitations</button>
+                </div>
+
+                <div class="group-card">
+                    <div class="group-cover"></div>
+                    <div class="group-info">
+                        <h3 class="group-title">Tech Enthusiasts</h3>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 1.2K members</span>
+                            <span><i class="fas fa-comments"></i> 50 posts today</span>
+                        </div>
+                        <p class="group-description">
+                            A community for technology enthusiasts to discuss the latest trends,
+                            share knowledge, and connect with like-minded individuals.
+                        </p>
+                        <div class="group-actions">
+                            <button class="join-btn">Join Group</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group-card">
+                    <div class="group-cover"></div>
+                    <div class="group-info">
+                        <h3 class="group-title">Photography Club</h3>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 800 members</span>
+                            <span><i class="fas fa-comments"></i> 30 posts today</span>
+                        </div>
+                        <p class="group-description">
+                            Share your photography, get feedback, and learn from other photographers.
+                            All skill levels are welcome!
+                        </p>
+                        <div class="group-actions">
+                            <button class="join-btn">Join Group</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="groups-sidebar">
+                <div class="my-groups">
+                    <h3>My Groups</h3>
+                    <div class="group-item">
+                        <img src="../images/default-avatar.png" alt="Group Icon">
+                        <div class="group-item-info">
+                            <div class="group-item-name">Web Developers</div>
+                            <div class="group-item-members">500 members</div>
+                        </div>
+                    </div>
+                    <div class="group-item">
+                        <img src="../images/default-avatar.png" alt="Group Icon">
+                        <div class="group-item-info">
+                            <div class="group-item-name">Design Community</div>
+                            <div class="group-item-members">300 members</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group-categories">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li class="category-item active">Technology</li>
+                        <li class="category-item">Art & Design</li>
+                        <li class="category-item">Business</li>
+                        <li class="category-item">Education</li>
+                        <li class="category-item">Entertainment</li>
+                        <li class="category-item">Health & Fitness</li>
+                        <li class="category-item">Music</li>
+                        <li class="category-item">Sports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SocialConnect</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Help & Support</h4>
+                <ul>
+                    <li><a href="help.html">Help Center</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="safety.html">Safety Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SocialConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

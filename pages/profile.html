@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - SocialConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .profile-header {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-cover {
+            height: 200px;
+            background-color: #1877f2;
+            border-radius: 8px 8px 0 0;
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: flex-end;
+            margin-top: -100px;
+            padding: 0 2rem;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            margin-right: 2rem;
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1877f2;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .profile-actions button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .edit-profile {
+            background-color: #e4e6eb;
+            color: #1c1e21;
+        }
+
+        .add-friend {
+            background-color: #1877f2;
+            color: #ffffff;
+        }
+
+        .profile-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-tab {
+            padding: 0.5rem 1rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #65676b;
+            border-bottom: 2px solid transparent;
+        }
+
+        .profile-tab.active {
+            color: #1877f2;
+            border-bottom-color: #1877f2;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .post-header .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="../index.html">SocialConnect</a>
+        </div>
+        <div class="nav-search">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+            <a href="messages.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="friends.html"><i class="fas fa-users"></i> Friends</a>
+        </div>
+        <div class="nav-profile">
+            <img src="../images/profile_photo.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">Ridhima Garg</span>
+        </div>
+        <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="mobile-nav">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+            <a href="messages.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="friends.html"><i class="fas fa-users"></i> Friends</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="profile-header">
+            <div class="profile-cover"></div>
+            <div class="profile-info">
+                <img src="../images/profile_photo.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="profile-details">
+                    <h2>Ridhima Garg</h2>
+                    <p class="username">@ridhimagarg</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <div class="stat-value">1.2K</div>
+                            <div class="stat-label">Friends</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">500</div>
+                            <div class="stat-label">Posts</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">50K</div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                    </div>
+                    <div class="profile-actions">
+                        <button class="edit-profile"><i class="fas fa-edit"></i> Edit Profile</button>
+                        <button class="add-friend"><i class="fas fa-user-plus"></i> Add Friend</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-tabs">
+            <button class="profile-tab active">Posts</button>
+            <button class="profile-tab">About</button>
+            <button class="profile-tab">Friends</button>
+            <button class="profile-tab">Photos</button>
+            <button class="profile-tab">Videos</button>
+        </div>
+
+        <div class="content">
+            <div class="posts">
+                <!-- Sample Post -->
+                <div class="post">
+                    <div class="post-header">
+                        <img src="../images/female_avatar.jpg" alt="User Avatar" class="avatar">
+                        <div class="post-info">
+                            <h3>Ridhima Garg</h3>
+                            <span>2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <p>Just finished working on an exciting new project! Can't wait to share more details soon.</p>
+                        <img src="../images/sample-post.jpg" alt="Post Image">
+                    </div>
+                    <div class="post-actions">
+                        <button><i class="fas fa-heart"></i> Like</button>
+                        <button><i class="fas fa-comment"></i> Comment</button>
+                        <button><i class="fas fa-share"></i> Share</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SocialConnect</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Help & Support</h4>
+                <ul>
+                    <li><a href="help.html">Help Center</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="safety.html">Safety Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SocialConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html> 

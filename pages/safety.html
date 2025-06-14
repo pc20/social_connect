@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Center - SocialConnect</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .safety-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .safety-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .safety-header h1 {
+            font-size: 2.5rem;
+            color: #1877f2;
+            margin-bottom: 1rem;
+        }
+
+        .safety-header p {
+            color: #65676b;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .safety-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .safety-card i {
+            font-size: 2.5rem;
+            color: #1877f2;
+            margin-bottom: 1rem;
+        }
+
+        .safety-card h3 {
+            color: #1c1e21;
+            margin-bottom: 1rem;
+        }
+
+        .safety-card p {
+            color: #65676b;
+            line-height: 1.6;
+        }
+
+        .safety-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .safety-section h2 {
+            color: #1877f2;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e4e6eb;
+        }
+
+        .safety-section h3 {
+            color: #1c1e21;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .safety-section p {
+            color: #65676b;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .safety-section ul {
+            color: #65676b;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .safety-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .emergency-section {
+            background-color: #ff4444;
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .emergency-section h2 {
+            margin-bottom: 1rem;
+        }
+
+        .emergency-section p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .emergency-btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #ff4444;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .emergency-btn:hover {
+            background-color: #f0f2f5;
+        }
+
+        .resources-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .resource-card {
+            background-color: #f0f2f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .resource-card h3 {
+            color: #1c1e21;
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-card p {
+            color: #65676b;
+            margin-bottom: 1rem;
+        }
+
+        .resource-link {
+            display: inline-block;
+            color: #1877f2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h1>SocialConnect</h1>
+        </div>
+        <div class="nav-links">
+            <a href="../index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="messages.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="friends.html"><i class="fas fa-users"></i> Friends</a>
+        </div>
+        <div class="nav-search">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="safety-container">
+            <div class="safety-header">
+                <h1>Safety Center</h1>
+                <p>Your safety is our top priority. Learn how to stay safe on SocialConnect and what to do if you encounter any issues.</p>
+            </div>
+
+            <div class="safety-grid">
+                <div class="safety-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Account Security</h3>
+                    <p>Learn how to protect your account with strong passwords and two-factor authentication.</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Privacy Controls</h3>
+                    <p>Manage your privacy settings and control who can see your content.</p>
+                </div>
+                <div class="safety-card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Report Issues</h3>
+                    <p>Find out how to report inappropriate content or behavior.</p>
+                </div>
+            </div>
+
+            <div class="emergency-section">
+                <h2>Need Immediate Help?</h2>
+                <p>If you're experiencing an emergency or need immediate assistance, contact our support team right away.</p>
+                <a href="contact.html" class="emergency-btn">Contact Support</a>
+            </div>
+
+            <div class="safety-section">
+                <h2>Safety Guidelines</h2>
+                <h3>Protecting Your Privacy</h3>
+                <ul>
+                    <li>Use strong, unique passwords</li>
+                    <li>Enable two-factor authentication</li>
+                    <li>Be careful about sharing personal information</li>
+                    <li>Regularly review your privacy settings</li>
+                </ul>
+
+                <h3>Safe Social Networking</h3>
+                <ul>
+                    <li>Be cautious about accepting friend requests</li>
+                    <li>Think before you post</li>
+                    <li>Be respectful of others</li>
+                    <li>Report suspicious activity</li>
+                </ul>
+
+                <h3>Protecting Your Content</h3>
+                <ul>
+                    <li>Review your sharing settings</li>
+                    <li>Be mindful of what you post</li>
+                    <li>Use privacy controls for sensitive content</li>
+                    <li>Regularly check your activity log</li>
+                </ul>
+            </div>
+
+            <div class="resources-section">
+                <h2>Safety Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>Safety Guide</h3>
+                        <p>Comprehensive guide to staying safe online</p>
+                        <a href="#" class="resource-link">Read Guide</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Parent Resources</h3>
+                        <p>Tools and tips for parents</p>
+                        <a href="#" class="resource-link">View Resources</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Safety Tools</h3>
+                        <p>Tools to help manage your safety</p>
+                        <a href="#" class="resource-link">Access Tools</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Community Guidelines</h3>
+                        <p>Learn about our community standards</p>
+                        <a href="#" class="resource-link">Read Guidelines</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About SocialConnect</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Help & Support</h4>
+                <ul>
+                    <li><a href="help.html">Help Center</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="safety.html">Safety Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SocialConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
