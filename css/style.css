@@ -92,6 +92,28 @@ body {
     object-fit: cover;
 }
 
+.welcome-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    background-color: #e4e6eb;
+    color: #1877f2;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.welcome-btn i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.welcome-btn:hover {
+    background-color: #d8dadf;
+}
+
 /* Main Container */
 .container {
     max-width: 1200px;
@@ -700,6 +722,10 @@ body {
     
     .social-links {
         justify-content: center;
+    }
+    
+    .welcome-btn {
+        display: none;
     }
 }
 
