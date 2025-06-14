@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="home.html">SocialConnect</a>
+        </div>
+        <div class="nav-search">
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="pages/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="pages/messages.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="pages/notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="pages/friends.html"><i class="fas fa-users"></i> Friends</a>
+        </div>
+        <div class="nav-profile">
+            <img src="images/profile_photo.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="username">Ridhima Garg</span>
+        </div>
+        <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="mobile-nav">
+            <a href="home.html"><i class="fas fa-home"></i> Home</a>
+            <a href="pages/profile.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="pages/messages.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="pages/notifications.html"><i class="fas fa-bell"></i> Notifications</a>
+            <a href="pages/friends.html"><i class="fas fa-users"></i> Friends</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="content-grid">
+            <aside class="sidebar">
+                <div class="profile-card">
+                    <div class="cover-photo">
+                        <img src="" alt="Cover Photo" class="cover-image">
+                    </div>
+                    <div class="profile-info">
+                        <img src="images/profile_photo.jpg" alt="Profile Picture" class="profile-pic">
+                        <h3>Ridhima Garg</h3>
+                        <p>@ridhimagarg</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="count">1.2k</span>
+                                <span class="label">Posts</span>
+                            </div>
+                            <div class="stat">
+                                <span class="count">5.6k</span>
+                                <span class="label">Followers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="count">890</span>
+                                <span class="label">Following</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="pages/events.html"><i class="fas fa-calendar"></i> Events</a>
+                    <a href="pages/groups.html"><i class="fas fa-users"></i> Groups</a>
+                    <a href="pages/settings.html"><i class="fas fa-cog"></i> Settings</a>
+                </nav>
+            </aside>
+
+            <section class="main-content">
+                <div class="create-post">
+                    <img src="./images/profile_photo.jpg" alt="Profile Picture" class="profile-pic">
+                    <form class="post-form">
+                        <textarea placeholder="What's on your mind?"></textarea>
+                        <div class="post-actions">
+                            <button type="button"><i class="fas fa-image"></i> Photo</button>
+                            <button type="button"><i class="fas fa-video"></i> Video</button>
+                            <button type="submit">Post</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="posts">
+                    <article class="post">
+                        <div class="post-header">
+                            <img src="./images/profile_photo.jpg" alt="Profile Picture" class="profile-pic">
+                            <div class="post-info">
+                                <h4>Shailshi Garg</h4>
+                                <span class="post-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Just finished a great workout! 💪 #fitness #motivation</p>
+                            <img src="./images/profile_photo.jpg" alt="Post Image" class="post-image">
+                        </div>
+                        <div class="post-actions">
+                            <button class="like-btn"><i class="far fa-heart"></i> <span class="like-count">245</span></button>
+                            <button class="comment-btn"><i class="far fa-comment"></i> <span class="comment-count">56</span></button>
+                            <button class="share-btn"><i class="far fa-share-square"></i> Share</button>
+                        </div>
+                        <div class="comments-section">
+                            <form class="comment-form">
+                                <img src="./images/profile_photo.jpg" alt="Profile Picture" class="profile-pic">
+                                <textarea placeholder="Write a comment..."></textarea>
+                                <button type="submit">Post</button>
+                            </form>
+                            <div class="comments-list">
+                                <div class="comment">
+                                    <img src="./images/female_avatar.jpg" alt="Profile Picture" class="profile-pic">
+                                    <div class="comment-content">
+                                        <h4>Chandani Agrawal</h4>
+                                        <p>Looking great! Keep up the good work! 💪</p>
+                                        <span class="comment-time">1 hour ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="trending">
+                <div class="trending-card">
+                    <h3>Trending Topics</h3>
+                    <ul class="trending-list">
+                        <li>
+                            <span class="trend-tag">#Technology</span>
+                            <span class="trend-posts">2.5k posts</span>
+                        </li>
+                        <li>
+                            <span class="trend-tag">#Fitness</span>
+                            <span class="trend-posts">1.8k posts</span>
+                        </li>
+                        <li>
+                            <span class="trend-tag">#Travel</span>
+                            <span class="trend-posts">1.2k posts</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="suggested-friends">
+                    <h3>Suggested Friends</h3>
+                    <div class="friend-suggestions">
+                        <div class="friend-suggestion">
+                            <img src="./images/female_avatar.jpg" alt="Profile Picture" class="profile-pic">
+                            <div class="friend-info">
+                                <h4>Shivali Agrawal</h4>
+                                <p>15 mutual friends</p>
+                            </div>
+                            <button class="friend-request-btn">Add Friend</button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/careers.html">Careers</a></li>
+                    <li><a href="pages/privacy.html">Privacy Policy</a></li>
+                    <li><a href="pages/terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="pages/help.html">Help Center</a></li>
+                    <li><a href="pages/safety.html">Safety Center</a></li>
+                    <li><a href="pages/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SocialConnect. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
